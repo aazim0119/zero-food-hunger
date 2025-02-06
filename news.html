@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latest Nutrition News</title>
+  <link rel="stylesheet" href="news.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Latest Nutrition News</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="diet-plans.html">Diet Plans</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="news.html">News</a></li> <!-- Current page -->
+        <li><a href="#community">Community</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Add a search bar below the header -->
+<section id="news-search">
+    <input type="text" id="search-input" placeholder="Search for news (e.g., vitamins, farming)">
+    <button id="search-btn">Search</button>
+  </section>
+
+  <!-- News Section -->
+  <section id="news-container">
+    <h2>Today's Top Nutrition Stories</h2>
+    <div id="news-articles"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Zero Hunger: A Sustainable Solution</p>
+  </footer>
+
+  <script src="news.js"></script>
+</body>
+</html>

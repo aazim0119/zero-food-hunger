@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalized Diet Plans</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Personalized Diet Plans</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#search">Search</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Search Section -->
+  <section id="search">
+    <h2>Search for Nutritional Plans</h2>
+    <p>Enter a health condition to find a personalized diet plan.</p>
+    <div class="search-container">
+      <input type="text" id="disease-search" placeholder="e.g., Diabetes, High Blood Pressure">
+      <div id="suggestions"></div>
+    </div>
+    <button id="search-button">Search</button>
+  </section>
+
+  <!-- Results Section -->
+  <section id="results">
+    <h2>Nutritional Plan</h2>
+    <div id="plan-details"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Zero Hunger: A Sustainable Solution</p>
+  </footer>
+
+  <script src="diet-plans.js"></script>
+</body>
+</html>

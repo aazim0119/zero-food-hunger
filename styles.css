@@ -1,0 +1,237 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #e0f7fa;
+}
+
+/* Search Section */
+#search {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: white;
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#search h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+#search p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+  width: 70%;
+  max-width: 600px;
+}
+
+#disease-search {
+  padding: 1rem;
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#disease-search:focus {
+  border-color: #4CAF50;
+}
+
+#search-button {
+  padding: 1rem 2rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#search-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+#search-button:active {
+  transform: translateY(0);
+}
+
+/* Suggestions Dropdown */
+#suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 0 0 10px 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+  color: #333;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Results Section */
+#results {
+  padding: 3rem 2rem;
+  background-color: white;
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#results h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+#plan-details {
+  margin-top: 1.5rem;
+}
+
+#plan-details h3 {
+  color: #4CAF50;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+#plan-details p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+#plan-details ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+#plan-details li {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #333;
+  color: white;
+  margin-top: 3rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#results, #search {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  #search {
+    padding: 2rem 1rem;
+  }
+
+  .search-container {
+    width: 90%;
+  }
+
+  #disease-search {
+    font-size: 0.9rem;
+  }
+
+  #search-button {
+    padding: 0.75rem 1.5rem;
+  }
+
+  #results {
+    padding: 2rem 1rem;
+  }
+}
