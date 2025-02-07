@@ -178,38 +178,25 @@ body {
     color: #4CAF50;
     margin-top: 0;
   }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: #333;
-    color: white;
-    margin-top: 2rem;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 2rem;
-    }
-  
-    nav ul li {
-      display: block;
-      margin: 0.5rem 0;
-    }
-  
-    section {
-      padding: 1.5rem;
-      margin: 1.5rem;
-    }
-  
-    h2 {
-      font-size: 1.75rem;
-    }
-  
-    button {
-      width: 100%;
-      padding: 1rem;
-    }
-  }
+/* Footer Section */
+footer {
+  background-color: #4CAF50; /* Match header background */
+  color: white; /* Match header text color */
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+footer p {
+  margin: 0.5rem 0; /* Spacing between paragraphs */
+}
+
+footer a {
+  color: #d4ffd4; /* Lighter color for footer links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff; /* Change color on hover */
+}

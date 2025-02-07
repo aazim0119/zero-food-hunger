@@ -1,60 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zero Hunger: A Sustainable Solution</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Login and Signup Form</title>
+
+    <!-- style CSS -->
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Zero Hunger: A Sustainable Solution</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="dietplan.html">Diet Plans</a></li>
-        <li><a href="quiz.html">Quiz</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="#community">Community</a></li>
-      </ul>
-    </nav>
-  </header>
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header>Login</header>
+                <form id="login-form">
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" class="input" required>
+                    </div>
 
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" class="password" required>
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
 
+                    <div class="form-link">
+                        <a href="#" class="forgot-pass">Forgot password?</a>
+                    </div>
 
+                    <div class="field button-field">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
 
-  <!-- Home Section -->
-  <section id="home">
-    <h2>Welcome to Zero Hunger</h2>
-    <p>Join us in the fight against hunger and malnutrition. Explore personalized diet plans, test your knowledge, and stay informed about global efforts to achieve Zero Hunger.</p>
-  
-  </section>
+                <div class="form-link">
+                    <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
+                </div>
+            </div>
 
-<!-- Diet Plans Section -->
+            <div class="line"></div>
 
+            <div class="media-options">
+                <a href="#" class="field facebook">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    <span>Login with Facebook</span>
+                </a>
+            </div>
 
-  <!-- News Section -->
-  <section id="news">
-    <h2>Latest News</h2>
-    <p>Stay updated on global and local Zero Hunger initiatives.</p>
-    <div id="news-articles">
-      <article>
-        <h3>New Initiative to Reduce Food Waste</h3>
-        <p>Learn how communities are working together to reduce food waste and improve food security.</p>
-      </article>
-      <article>
-        <h3>Sustainable Farming Practices</h3>
-        <p>Discover how sustainable farming is helping to combat hunger worldwide.</p>
-      </article>
-    </div>
-  </section>
+            <div class="media-options">
+                <a href="#" class="field google">
+                    <img src="image/google-image.png" alt="" class="google-img">
+                    <span>Login with Google</span>
+                </a>
+            </div>
+        </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2023 Zero Hunger: A Sustainable Solution</p>
-  </footer>
+        <!-- Signup Form -->
+        <div class="form signup" style="display: none;">
+            <div class="form-content">
+                <header>Signup</header>
+                <form action="#">
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" class="input" required>
+                    </div>
 
-  <script src="script.js"></script>
+                    <div class="field input-field">
+                        <input type="password" placeholder="Create password" class="password" required>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Confirm password" class="password" required>
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
+
+                    <div class="field button-field">
+                        <button type="submit">Signup</button>
+                    </div>
+                </form>
+
+                <div class="form-link">
+                    <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="media-options">
+                <a href="#" class="field facebook">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    <span>Login with Facebook</span>
+                </a>
+            </div>
+
+            <div class="media-options">
+                <a href="#" class="field google">
+                    <img src="image/google-image.png" alt="google image" class="google-img">
+                    <span>Login with Google</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="login.js"></script>
+    <script>
+        const loginLink = document.querySelector('.signup-link');
+        const signupLink = document.querySelector('.login-link');
+        const loginForm = document.querySelector('.login');
+        const signupForm = document.querySelector('.signup');
+        const loginFormElement = document.getElementById('login-form');
+
+        loginLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'block';
+        });
+
+        signupLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            signupForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        });
+
+        // Handle login
+        loginFormElement.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Simulate successful login
+            localStorage.setItem('loggedIn', 'true');
+            window.location.href = 'main.html';g // Redirect to the main page
+        });
+    </script>
 </body>
 </html>
